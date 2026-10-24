@@ -13,27 +13,40 @@ void subcription()
 
     cout << daysUntilExpiration << endl;
 
-    if (daysUntilExpiration <= 10 && daysUntilExpiration > 5)
+    switch (daysUntilExpiration)
     {
-        cout << "Your Subcription will expire soon, Please Renew!" << endl;
-    }
-    else if (daysUntilExpiration <= 5 && daysUntilExpiration > 1)
-    {
-        cout << "Your Subcription Expires in " << daysUntilExpiration << endl;
+    case 10:
+    case 9:
+    case 8:
+    case 7:
+    case6:
+
+        cout << "Your Subcription will expire soon, Renew now!" << endl;
+        break;
+    case 5:
+    case 4:
+    case 3:
+    case 2:
+        cout << "Your subcription expires in " << daysUntilExpiration << " days" << endl;
         cout << "Renew now and save 10%!" << endl;
-    }
-    else if (daysUntilExpiration == 1)
-    {
-        cout << "Your Subcription Expires within a Day" << endl;
-        cout << "Renew now and save 20%" << endl;
-    }
-    else if (daysUntilExpiration == 0)
-    {
-        cout << "Your Subcription has Expired!" << endl;
-    }
-    else
-    {
-        cout << "You have an active Subcription!" << endl;
+
+        break;
+
+    case 1:
+
+        cout << "Your subcription expires within a day" << endl;
+        cout << "Renew now and save 20%";
+
+        break;
+
+    case 0:
+
+        cout << "Your subcription has expired " << endl;
+        break;
+
+    default:
+        cout
+            << "You have an active subcription";
     }
 }
 
