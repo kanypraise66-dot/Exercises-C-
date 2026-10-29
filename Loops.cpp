@@ -2,26 +2,26 @@
 #include <string>
 using namespace std;
 
-void loop(string arr[], int size)
+void loop(int V)
 {
-
-    for (int i = 0; i < size; i++)
+    int value = V;
+    while (value < 5 || value > 10)
     {
-        // cout << arr[i] << endl;
 
-        if ((arr[i][0]) == 'B')
-        {
-            cout << arr[i] << endl;
-        }
+        cout << "Please Enter a value between 5 & 10 !" << endl;
+        cin >> value;
     }
+    cout << "You have entered a valid value: " << value << endl;
 }
 
 int main()
 {
 
-    string ar1[] = {"B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179"};
+    int number;
 
-    int size = sizeof(ar1) / sizeof(ar1[0]);
+    cout << "Enter Your Number" << endl;
 
-    loop(ar1, size);
+    cin >> number;
+
+    loop(number);
 }
