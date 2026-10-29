@@ -21,7 +21,14 @@ int main()
 
     cout << "Enter Your Number" << endl;
 
-    cin >> number;
+    while (!(std::cin >> number))
+    {
+        std::cout << "Sorry you've entered an invalid number" << endl;
+
+        std::cin.clear();
+
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+    }
 
     loop(number);
 }
